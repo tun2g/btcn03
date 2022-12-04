@@ -1,0 +1,23 @@
+<div>Kết quả tìm kiếm<div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Họ và tên</th>
+      <th scope="col">Ảnh</th>
+      <th scope="col">Thông tin</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each casts}}
+    <tr>
+      <th scope="row">~</th>
+      <td>{{this.NAME}}</td>
+      <td>
+        <img src="{{this.IMG}}" height="200" width="auto" alt="">
+         </td>
+      <td><a href="http://localhost:20617/cast/detail/{{this.ID}}" class="btn btn-primary">Chi tiết</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

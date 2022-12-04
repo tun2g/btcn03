@@ -1,0 +1,38 @@
+<div style="display: flex; flex-direction:column">
+    <div class="card movie_card">
+
+        <img src="{{movie.IMG}}" width="500" height="300" class="card-img-top" alt="...">
+        <a href="http://localhost:20617/movie/review/{{movie.ID}}" class="btn btn-primary">Xem review</a>
+        <div class="card-body">
+        </i>
+        <h5 class="card-title">{{movie.TITLE}}</h5>
+        <span class="movie_info">{{movie.YEAR}}</span>
+        <span class="movie_info float-right"><i class="fas fa-star"></i> {{movie.RATIING}}</span>
+        </div>
+        <div id="btn-fav" class="btn btn-primary" value="{{movie.ID}}">Thêm vào danh sách yêu thích</div>
+    </div>
+    <div style="">
+        <p>{{detail.text}}</p>
+    </div>  
+</div>
+
+<div>
+    <div>Thể loại: 
+        {{genres}}
+    </div>
+</div>
+
+<div>
+    <h2>Danh sách diễn viên</h2>
+    <div class="container" style="display:flex ; flex-direction:row;flex-wrap:wrap">
+        {{#each casts}}
+        <div class="card" style="width: 18rem; margin: 10px;">
+        <img class="card-img-top" src="{{this.IMG}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.NAME}}</h5>
+            <a href="http://localhost:20617/cast/detail/{{this.ID}}" class="btn btn-primary">Chi tiết</a>
+        </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

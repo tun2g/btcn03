@@ -1,0 +1,11 @@
+<h1>{{movie.TITLE}}</h1>
+    {{#each reviews}}
+    <div class="card movie_card" style="width: 100%;">
+            <div class="card-body">
+            <h5 class="card-title">{{this.AUTHOR}}</h5>
+            <span class="movie_info" style="color:crimson">{{this.REVIEWTITLE}}</span>
+            <p>{{this.REVIEWTEXT}}</p>
+            <span class="movie_info float-right"><i class="fas fa-star"></i> {{this.AUTHORRATIING}}</span>
+            </div>
+    </div>
+{{/each}}

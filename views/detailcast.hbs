@@ -1,0 +1,21 @@
+<h1>{{cast.NAME}}</h1>
+<img src="{{cast.IMG}}" width="200" height="auto">
+<div>Nick name: {{cast.NICKNAME}}</div>
+
+<h2>danh sách các phim tham gia</h2>
+<div class="container" style="display:flex ; flex-direction:row;flex-wrap:wrap">
+    {{#each movies}}
+    <div class="card movie_card">
+        <a href="/movie/detail/{{this.ID}}">
+            <img src="{{this.IMG}}" width="200" height="auto" class="card-img-top" alt="...">
+            <div class="card-body">
+            <i class="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
+            </i>
+            <h5 class="card-title">{{this.TITLE}}</h5>
+            <span class="movie_info">{{this.YEAR}}</span>
+            <span class="movie_info float-right"><i class="fas fa-star"></i> {{this.RATIING}}</span>
+            </div>
+        </a>
+    </div>
+{{/each}}
+</div>
